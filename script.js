@@ -5,6 +5,16 @@ let topNews = document.querySelector('.topNews')
 let sportsNews = document.querySelector('#sportsNews .newsBox')
 let businessNews = document.querySelector('#businessNews .newsBox')
 let techNews = document.querySelector('#techNews .newsBox')
+let header = document.querySelector('.header')
+
+window.addEventListener('scroll',()=>{
+    if(window.scrollY>50){
+        header.classList.add('sticky')
+    }
+    else{
+        header.classList.remove('sticky')
+    }
+})
 
 const apiKey = "807ba9e18a61474188f2708f820947a8"
 
